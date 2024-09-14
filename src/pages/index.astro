@@ -9,22 +9,26 @@ import MailIcon from "../components/icons/Mail.astro";
 import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Briefcase from "../components/icons/Briefcase.astro";
+import Code from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout
   title="Juan Portfolio - Web Developer with 4 years of experience"
   description="Hire Juan as your web developer, specialized in creating quality applications."
 >
-  <main>
-    <SectionContainer class="py-44 pb-24">
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-32">
       <img
         class="rounded-full size-12 mb-4"
         src="https://avatars.githubusercontent.com/u/1425140?v=4"
         alt="Juan"
       />
 
-      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
-        Hey, soy Juan
+      <h1
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        Hey, I am Juan
         <!-- <div class="flex justify-center items-center"> -->
         <a
           href="https://www.linkedin.com/in/juan-castro-6398a9103/"
@@ -32,43 +36,51 @@ import Briefcase from "../components/icons/Briefcase.astro";
           rel="noopener"
           class="flex justify-center items-center"
         >
-          <Badge>Disponible para trabajar</Badge>
+          <Badge>Available to work</Badge>
         </a>
         <!-- </div> -->
       </h1>
-      <div class="text-2xl opacity-80 text-wrap">
-        <span>+4 años de experiencia.</span><span class="text-yellow-200/90">
-          Desarrollador Web.</span
+      <h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
+        <span>+4 years of experience.</span><span class="text-yellow-200/90">
+          Web Developer.</span
         >
-        <span class="text-red-200/90"> De Lima, Peru 🇵🇪.</span><span
+        <span class="text-red-200/90"> From Lima, Peru 🇵🇪.</span><span
           class="opacity-75"
         >
-          Especializado en crear soluciones de calidad.</span
+          Specialized in creating quality solutions.</span
         >
-      </div>
+      </h2>
 
-      <nav class="flex gap-x-4 mt-8">
+      <nav class="flex gap-4 mt-8 flex-wrap">
         <SocialStack href="https://www.linkedin.com/in/juan-castro-6398a9103/">
-          <LinkedInIcon class="size-6" />
+          <LinkedInIcon class="size-4 md:size-6" />
           Linkedin
         </SocialStack>
         <SocialStack href="https://github.com/juanxc">
-          <GitHubIcon class="size-6" />
+          <GitHubIcon class="size-4 md:size-6" />
           GitHub
         </SocialStack>
-        <SocialStack href="https://github.com/juanxc">
-          <MailIcon class="size-6" />
+        <SocialStack href="mailto:jnxcastro@gmail.com">
+          <MailIcon class="size-4 md:size-6" />
           jnxcastro@gmail.com
         </SocialStack>
       </nav>
     </SectionContainer>
 
     <SectionContainer id="experience">
-      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
         <Briefcase class="size-7" />
         Work Experience
       </h2>
       <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="projects">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Code class="size-7" />
+        Projects
+      </h2>
+      <Projects />
     </SectionContainer>
   </main>
 </Layout>

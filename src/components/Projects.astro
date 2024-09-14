@@ -1,0 +1,61 @@
+---
+import NextJS from "./icons/NextJS.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import React from "./icons/React.astro";
+
+const TAGS = {
+  REACT: {
+    name: "React",
+    class: "bg-black text-white",
+    icon: React,
+  },
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextJS,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Hotelzz - Hotel Management App",
+    description:
+      "Hotel App that reserves, and rates rooms using react, nextjs, sanity and tailwind.",
+    link: "https://hotel-management-zeta-seven.vercel.app/",
+    github: "https://github.com/juanxc/hotel-management",
+    image: "/projects/hotelzz.webp",
+    tags: [TAGS.REACT, TAGS.NEXT, TAGS.TAILWIND],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ title, description, image, tags }) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-2 flex-row mb-2">
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+            >
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        class="rounded shadow-2xl shadow-white/10"
+        src={image}
+        alt={`Screenshot of the project ${image}`}
+      />
+    </article>
+  ))
+}

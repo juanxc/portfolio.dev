@@ -4,16 +4,22 @@ import ExperienceItem from "./ExperienceItem.astro";
 
 const EXPERIENCE = [
   {
-    date: "February 2022",
-    title: "Application UI code in Tailwind CSS",
+    date: "March 2023",
+    title: "Frontend Developer - MINEDU",
     description:
-      "Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.",
+      "I was responsible for crafting the frontend architecture from the ground up using Angular 14. I accomplished to publish the first version of SIEESTP project.",
     link: "#",
+  },
+  {
+    date: "December 2022",
+    title: "Fullstack Developer - PROVIAS",
+    description:
+      "I was a main developer for a web-based system designed to streamline the authorization process for transport companies operating on national highways. I work with Angular and .Net Core C#. I get approved by the product owner for the Demo.",
   },
 ];
 ---
 
-<ol class="relative border-s border-gray-200 dark:border-gray-700">
+<ol class="relative border-s border-gray-200 ml-3">
   {
     EXPERIENCE.map((experience) => (
       <li class="mb-10 ms-4">
