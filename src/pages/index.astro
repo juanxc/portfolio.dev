@@ -6,6 +6,9 @@ import LinkedInIcon from "../components/icons/LinkedIn.astro";
 import SocialStack from "../components/SocialStack.astro";
 import GitHubIcon from "../components/icons/GitHub.astro";
 import MailIcon from "../components/icons/Mail.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
 ---
 
 <Layout
@@ -13,7 +16,7 @@ import MailIcon from "../components/icons/Mail.astro";
   description="Hire Juan as your web developer, specialized in creating quality applications."
 >
   <main>
-    <section class="w-full lg:w-[740px] mx-auto py-44">
+    <SectionContainer class="py-44 pb-24">
       <img
         class="rounded-full size-12 mb-4"
         src="https://avatars.githubusercontent.com/u/1425140?v=4"
@@ -58,6 +61,14 @@ import MailIcon from "../components/icons/Mail.astro";
           jnxcastro@gmail.com
         </SocialStack>
       </nav>
-    </section>
+    </SectionContainer>
+
+    <SectionContainer id="experience">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Briefcase class="size-7" />
+        Work Experience
+      </h2>
+      <Experience />
+    </SectionContainer>
   </main>
 </Layout>
